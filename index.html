@@ -1,9 +1,152 @@
 <html>
 	<head>
 		<title>Hello World</title>
+		<link href='https://fonts.googleapis.com/css?family=Bebas+Neue' rel='stylesheet'>
 	</head>
 	
 	<body>
-		<h1>birds ^^</h1>
+		<div id=sidebar>
+			<div id=card-container>
+				<div id=card>
+					<div id=card-front>
+						<img id=picture src="https://birdfeederhub.com/wp-content/uploads/2021/09/california_quail.jpg"></img>
+						<div id=card-text>
+							<h2>California Quail</h2>
+							<h3>Callipepla californica</h3>
+							<hr>
+						</div>
+					</div>
+					<div id=card-back>
+						<img id=picture src="https://birdfeederhub.com/wp-content/uploads/2021/09/california_quail.jpg"></img>
+						<div id=card-text>
+							<h2>Back of card</h2>
+							<h3>This is the back now</h3>
+							<hr>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id=info>
+				<h1 id=site-name>Utah</br>Ornithodex</h1>
+				<div id=links>
+					<a id=submission-form href=https://google.com>Submit A Sighting</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id=content>
+		</div>
 	</body>
+
+	<style>
+		html {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		#sidebar{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			background-color: #BC3823;
+			width: 30ch;
+			height: 100%;
+		}
+
+		#info {
+			width: 100%;
+			background-color: #CD5C5C;
+		}
+
+		#site-name {
+			color: #2F1D32;
+		
+			text-align: right;
+			font-family: 'Bebas Neue';
+			line-height: 3ch;
+			letter-spacing: .25ch;
+
+			padding: 0.5ch 1ch 0ch 2ch;
+			margin: 0ch;
+		}
+
+		#links {
+			width: 100%;
+			text-align: right;
+			font-family: 'Bebas Neue';
+		}
+
+		#submission-form {
+			height: 2ch;
+			text-decoration: none;
+			font-size: 16pt;
+			color: #8A3324; 
+			padding: 0ch 1ch 0ch 2ch;
+		}
+		
+		#submission-form:hover {
+			color: #612419; 
+		}
+
+
+		#card {
+			margin: 1ch;
+			background-color: orange;
+			width: 28ch;
+			height: 39.2ch;
+			border-radius: 1ch;
+		}
+
+		#picture {
+			margin: 1ch;
+			width: 26ch;
+			height: 18.6ch;
+			border-radius: 1ch;
+		}
+
+		h2 {
+			font-family: 'Bebas Neue';
+			letter-spacing: 1px;
+			margin: 0ch;
+			font-size: 12pt;
+		}
+		
+		h3 {
+			font-family: 'Bebas Neue';
+			letter-spacing: 0.5px;
+			font-size: 8pt;
+			margin: 0ch 1ch 0ch 1ch;
+		}
+		
+		#card-text hr {
+			border: 1px solid black;
+			margin: 0;
+		}
+
+		#card-text {
+			padding: 0ch 1ch 1ch 1ch;
+		}
+
+		#card:hover > #card-front {
+			visibility: hidden;
+		}
+	
+		#card-back {
+			visibility: hidden;
+		}
+
+		#card:hover > #card-back {
+			visibility: visible;
+		}
+	</style>
 </html>
